@@ -59,14 +59,8 @@ BuildRequires:  %{?scl_prefix}python3-wheel
 # For unittests
 BuildRequires: subversion
 
-%if 0%{?with_python2}
-# Legacy: We removed this subpackage once easy_install no longer depended on
-# python-devel
-# Planning on removing for F21
-# https://lists.fedoraproject.org/pipermail/devel/2013-November/191344.html
-Provides: %{?scl_prefix}python-setuptools-devel = %{version}-%{release}
-Obsoletes: %{?scl_prefix}python-setuptools-devel < 0.6.7-1
 
+%if 0%{?with_python2}
 # We're now back to setuptools as the package.
 # Keep the python-distribute name active for a few releases.  Eventually we'll
 # want to get rid of the Provides and just keep the Obsoletes
@@ -244,6 +238,16 @@ rm -rf %{buildroot}
 * Sun Jul 06 2014 Miro Hrončok <mhroncok@redhat.com> - 2.0-0.9.20140706hgac801e423bb9
 - Update to hg: ac801e423bb9
 
+* Mon Jun 30 2014 Toshio Kuratomi <toshio@fedoraproject.org> - 2.0-8
+- Remove the python-setuptools-devel Virtual Provides as per this Fedora 21
+  Change: http://fedoraproject.org/wiki/Changes/Remove_Python-setuptools-devel
+
+* Mon Jun 30 2014 Toshio Kuratomi <toshio@fedoraproject.org> - 2.0-7
+- And another bug in sdist
+
+* Mon Jun 30 2014 Toshio Kuratomi <toshio@fedoraproject.org> - 2.0-6
+- Fix a bug in the sdist command
+
 * Mon Jun 30 2014 Miro Hrončok <mhroncok@redhat.com> - 2.0-0.8.20140630hg2381b1160889
 - Update to hg: 2381b1160889
 
@@ -255,6 +259,9 @@ rm -rf %{buildroot}
 
 * Wed Jun 25 2014 Miro Hrončok <mhroncok@redhat.com> - 2.0-0.5.20140625hgb54ae9c52355
 - Update to hg: b54ae9c52355
+
+* Sat Jun 07 2014 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 2.0-5
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_21_Mass_Rebuild
 
 * Fri Apr 25 2014 Matej Stuchlik <mstuchli@redhat.com> - 2.0-4
 - Rebuild as wheel for Python 3.4
