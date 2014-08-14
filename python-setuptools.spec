@@ -25,7 +25,7 @@
 %endif
 
 Name:           %{?scl_prefix}python-setuptools
-Version:        2.0
+Version:        5.5.2
 Release:        0.17.20140812hgb2eebb79cecb%{?dist}
 Summary:        Easily build and distribute Python packages
 
