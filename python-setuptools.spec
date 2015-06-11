@@ -26,13 +26,13 @@
 
 Name:           %{?scl_prefix}python-setuptools
 Version:        7.1
-Release:        0.99.20150609hga8635de84a7d%{?dist}
+Release:        0.100.20150611hg3bccac59849f%{?dist}
 Summary:        Easily build and distribute Python packages
 
 Group:          Applications/System
 License:        Python or ZPLv2.0
 URL:            http://pypi.python.org/pypi/%{srcname}
-Source0:        python3-nightly-setuptools-a8635de84a7d.tar
+Source0:        python3-nightly-setuptools-3bccac59849f.tar
 Source1:        psfl.txt
 Source2:        zpl.txt
 
@@ -232,6 +232,9 @@ rm -rf %{buildroot}
 %endif # with_python3
 
 %changelog
+* Thu Jun 11 2015 Miro Hrončok <mhroncok@redhat.com> - 7.1-0.100.20150611hg3bccac59849f
+- Update to hg: 3bccac59849f
+
 * Tue Jun 09 2015 Miro Hrončok <mhroncok@redhat.com> - 7.1-0.99.20150609hga8635de84a7d
 - Update to hg: a8635de84a7d
 
